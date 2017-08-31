@@ -1,0 +1,32 @@
+
+<head>
+    <title>TipJar</title>
+</head>
+
+<body>
+    <h1>TipJar</h1>
+    {{> TipJar}}
+</body>
+
+<template name="TipJar">
+    {{> loginButtons}}
+    <ul>
+    {{#each recipient}}
+        <li class="user {{selectedClass}}">{{name}} : {{balance}}</li>
+    {{/each}}
+    </ul>
+    <input type='button' class='increment' value='Give 5 Dollars'>
+    <input type='button' class='decrement' value='Remove 5 Dollars'>
+    <li> Selected User: {{showSelectedUser.name}}</li>
+    {{> addUserForm}}
+</template>
+
+<template name="addUserForm">
+    {{#if currentUser}}
+    <form>
+        <input type="text" name="UserName">
+        <input type="submit" value="Add User">
+        <input type="button" class="remove" value="Remove User">
+    </form>
+    {{/if}}
+</template>
