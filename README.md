@@ -6,3 +6,5 @@ Developing skills with Meteor for forthcoming project
 # Contents:
 
 > Meteor for Beginners tutorial
+    - Followed the tutorial, making several edits for my own understanding.
+    - Served as primer for JS.
