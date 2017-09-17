@@ -9,6 +9,7 @@ import { Meteor } from 'meteor/meteor';
 
 // Modules
 import ChatsCtrl from '../controllers/chats.controller';
+import CalendarFilter from '../filters/calendar.filter';
 import RoutesConfig from '../routes';
 
 const App = "Whatsapp";
@@ -23,6 +24,7 @@ Angular.module(App, [
 new Loader(App)
     .load(ChatsCtrl)
     .load(RoutesConfig);
+    .load(CalendarFilter);
 
 // Startup
 
